@@ -25,7 +25,7 @@ $(call inherit-product, device/xiaomi/daisy/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
  # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_daisy
+PRODUCT_NAME := rr_daisy
 PRODUCT_DEVICE := daisy
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI A2 Lite
