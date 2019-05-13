@@ -20,6 +20,10 @@
     <dimen name="rounded_corner_radius">0.0dip</dimen>
     <dimen name="rounded_corner_radius_bottom">0.0dip</dimen>
     <dimen name="rounded_corner_radius_top">0.0dip</dimen>
-    <dimen name="status_bar_padding_end">10.0dip</dimen>
-    <dimen name="status_bar_padding_start">10.0dip</dimen>
+
+    <dimen name="status_bar_left_clock_starting_padding">0dp</dimen>
+    <dimen name="status_bar_padding_end">17dp</dimen>
+    <dimen name="status_bar_padding_start">17dp</dimen>
+    <dimen name="system_icons_keyguard_padding_end">21dp</dimen>
+    <dimen name="keyguard_carrier_text_margin">25dp</dimen>
 </resources>
