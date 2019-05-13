@@ -23,6 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=401 \
     debug.egl.hw=0 \
     debug.enable.sglscale=1 \
     debug.gralloc.enable_fb_ubwc=1 \
