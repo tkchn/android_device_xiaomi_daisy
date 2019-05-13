@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.target.rc
+    init.target.rc \
+    10disablehw
 
 # FM
 PRODUCT_PACKAGES += \
