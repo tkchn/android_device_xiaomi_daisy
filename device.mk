@@ -19,8 +19,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/daisy/daisy-vendor.mk)
-
-# Get additional apps
 $(call inherit-product-if-exists, vendor/microg/vendor_microg.mk)
 
 # Properties
@@ -41,6 +39,21 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     system
+
+# Boot control HAL
+PRODUCT_PACKAGES += \
+     android.hardware.boot@1.0-impl \
+     android.hardware.boot@1.0-service \
+     bootctrl.msm8953
+  
+PRODUCT_PACKAGES_DEBUG += \
+     bootctl
+  
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+     bootctrl.msm8953 \
+     libcutils \
+     libgptutils \
+     libz
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
