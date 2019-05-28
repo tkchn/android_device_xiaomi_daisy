@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     10disablehw
 
+# Display
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.0
+
 # Doze
 PRODUCT_PACKAGES += \
     XiaomiDoze
