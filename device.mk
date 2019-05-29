@@ -77,6 +77,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     10disablehw
 
+# Doze
+PRODUCT_PACKAGES += \
+    XiaomiDoze
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
