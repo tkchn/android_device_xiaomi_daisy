@@ -40,20 +40,14 @@ AB_OTA_PARTITIONS += \
     boot \
     system
 
-# Boot control HAL
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
 PRODUCT_PACKAGES += \
-     android.hardware.boot@1.0-impl \
-     android.hardware.boot@1.0-service \
-     bootctrl.msm8953
-  
-PRODUCT_PACKAGES_DEBUG += \
-     bootctl
-  
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-     bootctrl.msm8953 \
-     libcutils \
-     libgptutils \
-     libz
+    otapreopt_script
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
@@ -67,6 +61,10 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@4.0 \
     libaudio-resampler \
     tinymix
+
+# Boot control
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -127,6 +125,21 @@ PRODUCT_BOOT_JARS += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
+
+# Update engine
+PRODUCT_PACKAGES += \
+    brillo_update_payload \
+    update_engine \
+    update_verifier
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.msm8953 \
+    libcutils \
+    libgptutils \
+    libz
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
 
 # USB
 PRODUCT_PACKAGES += \
