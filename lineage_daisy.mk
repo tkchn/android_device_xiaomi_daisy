@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/daisy/device.mk)
 
  # Inherit some common RR stuff.	
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
  # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_daisy
@@ -34,11 +34,11 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="daisy" \
-    PRODUCT_NAME="daisy" \
-    PRIVATE_BUILD_DESC="daisy-user 9 PKQ1.180917.001 V10.0.1.0.PDLMIFJ release-keys"
+    TARGET_DEVICE="daisy_sprout" \
+    PRODUCT_NAME="daisy_sprout" \
+    PRIVATE_BUILD_DESC="daisy-user 9 PKQ1.180917.001 V10.0.9.0.PDLMIXM release-keys "
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop	
-BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.1.0.PDLMIFJ:user/release-keys"
+BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9/PKQ1.180917.001/V10.0.9.0.PDLMIXM:user/release-keys"
 
 TARGET_VENDOR := Xiaomi
